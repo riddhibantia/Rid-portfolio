@@ -79,6 +79,9 @@
   <main>
     <!-- 1. HERO SECTION -->
     <section id="hero" class="hero-section">
+      <!-- Strands WebGL Animation (full section background) -->
+      <div class="strands-container"></div>
+
       <div class="hero-canvas fade-in-section is-visible">
         <!-- Canvas Header -->
         <div class="hero-canvas-header">
@@ -134,94 +137,96 @@
     <!-- 2. ABOUT ME SECTION -->
     <section id="about" class="section-padding fade-in-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">About Me</h2>
-          <p class="section-subtitle">Get to know my journey, academic history, and research fields.</p>
-        </div>
-
-        <div class="about-container">
-          <!-- Biography Paragraph -->
-          <div class="about-bio">
-            <p class="about-bio-highlight">
-              I am a passionate software developer and student of modern technology. I enjoy building clean interfaces
-              and exploring smart backend logic.
-            </p>
-            <p>
-              My development journey started with writing basic scripts to automate repetitive tasks. Since then, I've
-              expanded into frontend design frameworks and machine learning libraries. I strive to write code that is
-              clean, self-documenting, and scalable.
-            </p>
-            <p>
-              When I am not coding, you can find me reading technical articles, experimenting with photography, or
-              learning about neural network architectures.
-            </p>
+        <div class="canvas-card">
+          <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Get to know my journey, academic history, and research fields.</p>
           </div>
 
-          <!-- Details/Summary Accordion (Zero JS Accordion) -->
-          <div class="about-details">
-            <!-- Item 1: Education -->
-            <details class="accordion-item" open>
-              <summary class="accordion-header">
-                <span>Education</span>
-                <!-- Chevron Icon -->
-                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </summary>
-              <div class="accordion-content">
-                <ul>
-                  <li>
-                    <strong>Bachelor of Science in Computer Science</strong><br>
-                    <span>University of Technology | 2024 - Present</span>
-                    <p style="font-size: 0.85rem; margin-top: 0.25rem;">Focusing on software engineering, algorithm
-                      design, and database systems.</p>
-                  </li>
-                </ul>
-              </div>
-            </details>
+          <div class="about-container">
+            <!-- Biography Paragraph -->
+            <div class="about-bio">
+              <p class="about-bio-highlight">
+                I am a passionate software developer and student of modern technology. I enjoy building clean interfaces
+                and exploring smart backend logic.
+              </p>
+              <p>
+                My development journey started with writing basic scripts to automate repetitive tasks. Since then, I've
+                expanded into frontend design frameworks and machine learning libraries. I strive to write code that is
+                clean, self-documenting, and scalable.
+              </p>
+              <p>
+                When I am not coding, you can find me reading technical articles, experimenting with photography, or
+                learning about neural network architectures.
+              </p>
+            </div>
 
-            <!-- Item 2: Interests -->
-            <details class="accordion-item">
-              <summary class="accordion-header">
-                <span>Interests</span>
-                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </summary>
-              <div class="accordion-content">
-                <ul>
-                  <li><strong>AI & ML Systems</strong>: Neural networks, natural language processing, predictive
-                    analysis.</li>
-                  <li><strong>Full Stack Engineering</strong>: Responsive layouts, component design, state
-                    architectures.</li>
-                  <li><strong>Open Source</strong>: Collaborating on developer tooling and library improvements.</li>
-                  <li><strong>Creative Arts</strong>: Urban photography and synthesizer sound design.</li>
-                </ul>
-              </div>
-            </details>
+            <!-- Details/Summary Accordion (Zero JS Accordion) -->
+            <div class="about-details">
+              <!-- Item 1: Education -->
+              <details class="accordion-item" open>
+                <summary class="accordion-header">
+                  <span>Education</span>
+                  <!-- Chevron Icon -->
+                  <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </summary>
+                <div class="accordion-content">
+                  <ul>
+                    <li>
+                      <strong>Bachelor of Science in Computer Science</strong><br>
+                      <span>University of Technology | 2024 - Present</span>
+                      <p style="font-size: 0.85rem; margin-top: 0.25rem;">Focusing on software engineering, algorithm
+                        design, and database systems.</p>
+                    </li>
+                  </ul>
+                </div>
+              </details>
 
-            <!-- Item 3: Current Learning Goals -->
-            <details class="accordion-item">
-              <summary class="accordion-header">
-                <span>Current Learning Goals</span>
-                <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </summary>
-              <div class="accordion-content">
-                <ul>
-                  <li>Deepen understanding of PyTorch and Transformer architectures.</li>
-                  <li>Mastering TypeScript design patterns and modular code structures.</li>
-                  <li>Exploring containerization (Docker) and basic CI/CD pipeline deployments.</li>
-                </ul>
-              </div>
-            </details>
+              <!-- Item 2: Interests -->
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>Interests</span>
+                  <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </summary>
+                <div class="accordion-content">
+                  <ul>
+                    <li><strong>AI & ML Systems</strong>: Neural networks, natural language processing, predictive
+                      analysis.</li>
+                    <li><strong>Full Stack Engineering</strong>: Responsive layouts, component design, state
+                      architectures.</li>
+                    <li><strong>Open Source</strong>: Collaborating on developer tooling and library improvements.</li>
+                    <li><strong>Creative Arts</strong>: Urban photography and synthesizer sound design.</li>
+                  </ul>
+                </div>
+              </details>
+
+              <!-- Item 3: Current Learning Goals -->
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>Current Learning Goals</span>
+                  <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </summary>
+                <div class="accordion-content">
+                  <ul>
+                    <li>Deepen understanding of PyTorch and Transformer architectures.</li>
+                    <li>Mastering TypeScript design patterns and modular code structures.</li>
+                    <li>Exploring containerization (Docker) and basic CI/CD pipeline deployments.</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
           </div>
         </div>
       </div>
@@ -230,12 +235,13 @@
     <!-- 3. SKILLS SECTION -->
     <section id="skills" class="section-padding fade-in-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">My Skills</h2>
-          <p class="section-subtitle">Categorized technologies and tools I work with.</p>
-        </div>
+        <div class="canvas-card">
+          <div class="section-header">
+            <h2 class="section-title">My Skills</h2>
+            <p class="section-subtitle">Categorized technologies and tools I work with.</p>
+          </div>
 
-        <div class="skills-grid">
+          <div class="skills-grid">
           <!-- Category 1: Languages -->
           <div class="skills-card">
             <div class="skills-card-header">
@@ -378,7 +384,9 @@
               <span class="skill-tag">npm / Vite</span>
               <span class="skill-tag">Postman</span>
             </div>
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
@@ -386,13 +394,14 @@
     <!-- 4. LEARNING PROGRESS SECTION -->
     <section id="progress" class="section-padding fade-in-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Learning Progress</h2>
-          <p class="section-subtitle">Real-time status of my technology stacks. Update placeholder widths as you learn.
-          </p>
-        </div>
+        <div class="canvas-card">
+          <div class="section-header">
+            <h2 class="section-title">Learning Progress</h2>
+            <p class="section-subtitle">Real-time status of my technology stacks. Update placeholder widths as you learn.
+            </p>
+          </div>
 
-        <div class="progress-grid">
+          <div class="progress-grid">
           <!-- HTML Progress -->
           <div class="progress-item">
             <div class="progress-info">
@@ -584,12 +593,13 @@
     <!-- 5. PROJECTS SECTION -->
     <section id="projects" class="section-padding fade-in-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">Click "View Details" to open detailed structural and feature overlays.</p>
-        </div>
+        <div class="canvas-card">
+          <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Click "View Details" to open detailed structural and feature overlays.</p>
+          </div>
 
-        <div class="projects-grid">
+          <div class="projects-grid">
           <!-- Project 1: EduReels -->
           <article class="project-card">
             <div class="project-image-wrapper">
@@ -746,18 +756,20 @@
             </div>
           </article>
         </div>
+        </div>
       </div>
     </section>
 
     <!-- 6. CERTIFICATES SECTION -->
     <section id="certificates" class="section-padding fade-in-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Certificates</h2>
-          <p class="section-subtitle">Academic accomplishments and technical course completions.</p>
-        </div>
+        <div class="canvas-card">
+          <div class="section-header">
+            <h2 class="section-title">Certificates</h2>
+            <p class="section-subtitle">Academic accomplishments and technical course completions.</p>
+          </div>
 
-        <div class="certificates-grid">
+          <div class="certificates-grid">
           <!-- Certificate 1: Front-End Development Foundations -->
           <article class="certificate-card">
             <div class="certificate-image-wrapper">
@@ -859,18 +871,20 @@
             </div>
           </article>
         </div>
+        </div>
       </div>
     </section>
 
     <!-- 7. CONTACT SECTION -->
     <section id="contact" class="section-padding fade-in-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Get in Touch</h2>
-          <p class="section-subtitle">Have a question or want to work together? Leave a message.</p>
-        </div>
+        <div class="canvas-card">
+          <div class="section-header">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Have a question or want to work together? Leave a message.</p>
+          </div>
 
-        <div class="contact-container">
+          <div class="contact-container">
           <!-- Left Info Block -->
           <div class="contact-info">
             <div>
@@ -950,6 +964,7 @@
 
             <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">Send Message</button>
           </form>
+        </div>
         </div>
       </div>
     </section>

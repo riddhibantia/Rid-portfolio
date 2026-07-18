@@ -7,10 +7,12 @@
  */
 
 import './styles/global.css';
+import './styles/strands.css';
 import { initNavbar } from './components/Navbar.ts';
 import { initProgress } from './components/Progress.ts';
 import { initProjects } from './components/Projects.ts';
 import { initContact } from './components/Contact.ts';
+import { initStrands } from './components/Strands.ts';
 
 // Wait for the DOM to be fully loaded before running our scripts
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,7 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjects();
   initContact();
 
-  // 2. Scroll Fade-in Animation (Intersection Observer)
+  // 2. Initialize Strands WebGL animation
+  initStrands({
+    colors: ['#6366f1', '#8b5cf6', '#a78bfa'],
+    count: 3,
+    speed: 0.4,
+    amplitude: 0.8,
+    waviness: 1,
+    thickness: 0.6,
+    glow: 2.2,
+    taper: 3,
+    spread: 1,
+    intensity: 0.5,
+    saturation: 1.2,
+    opacity: 0.7,
+    scale: 1.2
+  });
+
+  // 3. Scroll Fade-in Animation (Intersection Observer)
   // Observes elements with the class 'fade-in-section' and transitions them on scroll
   const fadeSections = document.querySelectorAll<HTMLElement>('.fade-in-section');
   

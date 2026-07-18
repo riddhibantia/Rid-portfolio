@@ -17,11 +17,11 @@
 .header.scrolled {
   transform: translateY(0);
   opacity: 1;
-  background-color: rgba(9, 9, 11, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(245, 245, 240, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-card);
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow-sm);
 }
 
 .nav-container {
@@ -35,10 +35,13 @@
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-primary);
   cursor: pointer;
+  letter-spacing: -0.02em;
+}
+
+.logo:hover {
+  color: var(--primary);
 }
 
 .nav-menu {
@@ -67,7 +70,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
+  background: var(--primary);
   transition: var(--transition-normal);
   border-radius: 2px;
 }
@@ -103,13 +106,13 @@
     max-width: 18rem;
     height: 100vh;
     background-color: var(--bg-card);
-    border-left: 1px solid var(--border-card);
+    border-left: 1.5px solid var(--border-card);
     flex-direction: column;
     justify-content: center;
     gap: 2.5rem;
     padding: 2rem;
     transition: var(--transition-normal);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
   }
 
   .nav-menu.open {
