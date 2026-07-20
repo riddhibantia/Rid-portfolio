@@ -1,0 +1,51 @@
+/* gradual-blur.css */
+.gradual-blur {
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+  isolation: isolate;
+}
+
+.gradual-blur-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gradual-blur-inner > div {
+  -webkit-backdrop-filter: inherit;
+  backdrop-filter: inherit;
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .gradual-blur-inner > div {
+    background: rgba(8, 4, 20, 0.3);
+    opacity: 0.5;
+  }
+}
+
+.gradual-blur-parent {
+  overflow: hidden;
+}
+
+/* Section transition blur containers */
+.section-transition-blur {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-transition-blur.top-blur {
+  top: -4rem;
+}
+
+.section-transition-blur.bottom-blur {
+  bottom: -4rem;
+}
+
+/* Ensure sections are relative for transition positioning */
+section[id], footer.footer {
+  position: relative;
+}

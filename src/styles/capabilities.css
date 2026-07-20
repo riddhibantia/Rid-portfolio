@@ -1,0 +1,108 @@
+/* capabilities.css — Light section with frosted glass cards */
+
+.capabilities--light {
+  position: relative;
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* Dark-to-light gradient transition at top */
+.capabilities__transition {
+  position: absolute;
+  top: -6rem;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  background: linear-gradient(to bottom, var(--bg-primary), var(--bg-light));
+  pointer-events: none;
+}
+
+.capabilities__layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.capabilities__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+}
+
+.capabilities__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.capability-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.capability-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.capability-card h3 {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.6rem;
+}
+
+.capability-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.capability-card li {
+  font-size: 0.8rem;
+  color: #4a4a6a;
+  line-height: 1.5;
+}
+
+/* ── Expertise (right column) ── */
+.capabilities__expertise-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.capabilities__expertise-text {
+  font-size: 0.9rem;
+  color: #4a4a6a;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .capabilities__grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .capabilities__layout { grid-template-columns: 1fr; }
+  .capabilities__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .capabilities__grid { grid-template-columns: 1fr; }
+}

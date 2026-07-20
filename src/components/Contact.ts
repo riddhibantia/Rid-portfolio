@@ -6,7 +6,7 @@
  */
 
 export function initContact(): void {
-  const form = document.querySelector<HTMLFormElement>('.contact-form');
+  const form = document.querySelector<HTMLFormElement>('.contact__form');
   const statusMessage = document.querySelector<HTMLDivElement>('.form-status');
 
   if (!form || !statusMessage) return;

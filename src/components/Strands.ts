@@ -8,6 +8,7 @@
 import { Renderer, Program, Mesh, Color, Triangle, RenderTarget } from 'ogl';
 
 interface StrandsOptions {
+  container?: HTMLElement | string;
   colors?: string[];
   count?: number;
   speed?: number;
@@ -202,10 +203,21 @@ function buildPalette(colors: string[]): number[][] {
 }
 
 export function initStrands(options: StrandsOptions = {}): (() => void) | null {
-  const container = document.querySelector<HTMLElement>('.strands-container');
+  const containerParam = options.container;
+  let container: HTMLElement | null = null;
+
+  if (containerParam instanceof HTMLElement) {
+    container = containerParam;
+  } else if (typeof containerParam === 'string') {
+    container = document.querySelector<HTMLElement>(containerParam);
+  } else {
+    container = document.querySelector<HTMLElement>('.strands-container');
+  }
+
   if (!container) return null;
 
   const opts: Required<StrandsOptions> = {
+    container: container,
     colors: ['#6366f1', '#8b5cf6', '#a78bfa'],
     count: 3,
     speed: 0.4,

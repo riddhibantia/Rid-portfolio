@@ -7,7 +7,7 @@
 
 export function initProjects(): void {
   const openButtons = document.querySelectorAll<HTMLButtonElement>('[data-dialog-target]');
-  const closeButtons = document.querySelectorAll<HTMLButtonElement>('.btn-close-dialog');
+  const closeButtons = document.querySelectorAll<HTMLButtonElement>('.dialog__close');
   const dialogs = document.querySelectorAll<HTMLDialogElement>('.project-dialog');
 
   // Open modal
