@@ -234,7 +234,7 @@ export class GradualBlur {
       div.style.maskImage = `linear-gradient(${direction}, ${gradient})`;
       div.style.webkitMaskImage = `linear-gradient(${direction}, ${gradient})`;
       div.style.backdropFilter = `blur(${blurValue.toFixed(3)}rem)`;
-      div.style.webkitBackdropFilter = `blur(${blurValue.toFixed(3)}rem)`;
+      (div.style as any)['-webkit-backdrop-filter'] = `blur(${blurValue.toFixed(3)}rem)`;
       div.style.opacity = String(this.config.opacity);
       
       if (this.config.animated && this.config.animated !== 'scroll') {

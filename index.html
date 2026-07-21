@@ -28,6 +28,9 @@
   <!-- GSAP for scroll animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Simple Icons for tool logos -->
+  <link rel="stylesheet" href="https://cdn.simpleicons.org/v15/" />
 </head>
 
 <body>
@@ -93,9 +96,9 @@
         <div class="hero__left">
           <span class="hero__label">Design Engineer & Creative Developer</span>
           <h1 class="hero__title">
-            <span class="hero__title-line" data-reveal>I build web</span>
-            <span class="hero__title-line" data-reveal>experiences <em>people</em></span>
-            <span class="hero__title-line" data-reveal><em>remember.</em></span>
+            <span class="hero__title-line" data-reveal>I design and</span>
+            <span class="hero__title-line" data-reveal>build <em>digital</em></span>
+            <span class="hero__title-line" data-reveal><em>experiences.</em></span>
           </h1>
         </div>
 
@@ -105,8 +108,8 @@
             <a href="#work" class="btn btn--outline">View work</a>
           </div>
           <p class="hero__description" data-reveal>
-            I work at the intersection of design and code. 3D scenes, scroll-driven narratives, and motion-rich
-            interfaces built with care for every detail. Not just functional — crafted.
+            I work at the intersection of design and code — crafting interfaces that are intuitive,
+            performant, and built with care for every detail. From concept to deployment, every pixel matters.
           </p>
         </div>
       </div>
@@ -123,35 +126,28 @@
       <div class="container">
         <div class="services__intro" data-reveal>
           <h2 class="services__headline">From Ideation to Launch,<br>I've Got You Covered.</h2>
-          <p class="services__description">I design and build web experiences that go beyond the expected —
-            3D scenes, scroll-driven narratives, and motion-rich interfaces that
-            make people stop and pay attention.</p>
+          <p class="services__description">I design and build digital solutions that solve real problems —
+            intelligent systems, responsive interfaces, and data-driven tools that
+            work as good as they look.</p>
         </div>
 
-        <h3 class="services__section-title" data-reveal>Immersive Web Experiences</h3>
+        <h3 class="services__section-title" data-reveal>What I Do</h3>
 
         <div class="services__grid">
           <div class="service-card" data-reveal>
-            <h4 class="service-card__title">3D Interactive Experiences</h4>
-            <p class="service-card__tagline">Your product in 3D — interactive, real-time, web-native.</p>
-            <p class="service-card__desc">Real-time 3D scenes built for the web. Product visualizers, interactive
-              environments, and narrative experiences that run in the browser without sacrificing performance.</p>
+            <h4 class="service-card__title">Web Development</h4>
+            <p class="service-card__tagline">Full-stack applications built with modern tools.</p>
+            <p class="service-card__desc">Responsive web applications, interactive dashboards, and performant
+              interfaces built with TypeScript, React, and modern frameworks. From concept to deployment — clean code,
+              thoughtful design, and attention to detail.</p>
           </div>
 
           <div class="service-card" data-reveal>
-            <h4 class="service-card__title">WebGL & Shader Effects</h4>
-            <p class="service-card__tagline">Visual effects that feel impossible — and run in the browser.</p>
-            <p class="service-card__desc">Custom GLSL shaders for transitions, distortions, particle systems, and
-              post-processing effects. The kind of visual layer that separates a good site from one people send to each
-              other.</p>
-          </div>
-
-          <div class="service-card" data-reveal>
-            <h4 class="service-card__title">Scroll Storytelling</h4>
-            <p class="service-card__tagline">A story that unfolds as you scroll.</p>
-            <p class="service-card__desc">Scroll-driven narratives where every pixel of movement is intentional.
-              Sequential animations, pinned sections, parallax, and 3D integration — designed to guide attention and
-              keep people engaged.</p>
+            <h4 class="service-card__title">ML/AI Solutions</h4>
+            <p class="service-card__tagline">Intelligent systems that learn and predict.</p>
+            <p class="service-card__desc">Machine learning models, predictive analytics, and NLP solutions
+              built with Python, scikit-learn, and PyTorch. From data preprocessing to deployment — turning raw data
+              into actionable insights.</p>
           </div>
         </div>
       </div>
@@ -197,7 +193,7 @@
         <div class="carousel__info">
           <span class="carousel__project-name" id="carousel-name">/EduReels</span>
           <span class="carousel__counter" id="carousel-counter">01/04</span>
-          <span class="carousel__see-live" id="carousel-live">See live</span>
+          <button class="carousel__see-live" id="carousel-live">See live</button>
         </div>
       </div>
       <div class="section-transition-blur bottom-blur" id="blur-bottom-work"></div>
@@ -211,71 +207,65 @@
           <div class="capabilities__left">
             <h2 class="capabilities__title" data-reveal>Tools and<br>Technologies</h2>
             <div class="capabilities__grid">
-              <div class="capability-card" data-reveal>
-                <h3>3D</h3>
-                <ul>
-                  <li>Blender</li>
-                  <li>Three.js</li>
-                  <li>OGL</li>
-                </ul>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/blender" alt="Blender logo" />
+                <h3 class="tool-card__name">Blender</h3>
               </div>
-              <div class="capability-card" data-reveal>
-                <h3>WebGL</h3>
-                <ul>
-                  <li>GLSL</li>
-                  <li>Three.js</li>
-                  <li>WebGL 2</li>
-                </ul>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/threedotjs" alt="Three.js logo" />
+                <h3 class="tool-card__name">Three.js</h3>
               </div>
-              <div class="capability-card" data-reveal>
-                <h3>Frontend</h3>
-                <ul>
-                  <li>TypeScript</li>
-                  <li>React</li>
-                  <li>GSAP</li>
-                  <li>Tailwind CSS</li>
-                </ul>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/typescript" alt="TypeScript logo" />
+                <h3 class="tool-card__name">TypeScript</h3>
               </div>
-              <div class="capability-card" data-reveal>
-                <h3>Design</h3>
-                <ul>
-                  <li>Figma</li>
-                  <li>After Effects</li>
-                  <li>Photoshop</li>
-                </ul>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/react" alt="React logo" />
+                <h3 class="tool-card__name">React</h3>
               </div>
-              <div class="capability-card" data-reveal>
-                <h3>Backend</h3>
-                <ul>
-                  <li>Node.js</li>
-                  <li>Python</li>
-                  <li>PostgreSQL</li>
-                  <li>REST APIs</li>
-                </ul>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind CSS logo" />
+                <h3 class="tool-card__name">Tailwind CSS</h3>
               </div>
-              <div class="capability-card" data-reveal>
-                <h3>CMS</h3>
-                <ul>
-                  <li>Wordpress</li>
-                  <li>Elementor</li>
-                  <li>Headless CMS</li>
-                </ul>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/figma" alt="Figma logo" />
+                <h3 class="tool-card__name">Figma</h3>
               </div>
-              <div class="capability-card" data-reveal>
-                <h3>AI & ML</h3>
-                <ul>
-                  <li>PyTorch</li>
-                  <li>scikit-learn</li>
-                  <li>NLP</li>
-                </ul>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/adobephotoshop" alt="Photoshop logo" />
+                <h3 class="tool-card__name">Photoshop</h3>
               </div>
-              <div class="capability-card" data-reveal>
-                <h3>Tools</h3>
-                <ul>
-                  <li>Git</li>
-                  <li>VS Code</li>
-                  <li>Vite</li>
-                </ul>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js logo" />
+                <h3 class="tool-card__name">Node.js</h3>
+              </div>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/python" alt="Python logo" />
+                <h3 class="tool-card__name">Python</h3>
+              </div>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL logo" />
+                <h3 class="tool-card__name">PostgreSQL</h3>
+              </div>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/wordpress" alt="WordPress logo" />
+                <h3 class="tool-card__name">WordPress</h3>
+              </div>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/pytorch" alt="PyTorch logo" />
+                <h3 class="tool-card__name">PyTorch</h3>
+              </div>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/git" alt="Git logo" />
+                <h3 class="tool-card__name">Git</h3>
+              </div>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/visualstudiocode" alt="VS Code logo" />
+                <h3 class="tool-card__name">VS Code</h3>
+              </div>
+              <div class="tool-card" data-reveal>
+                <img class="tool-card__icon" src="https://cdn.simpleicons.org/vite" alt="Vite logo" />
+                <h3 class="tool-card__name">Vite</h3>
               </div>
             </div>
           </div>
@@ -413,11 +403,11 @@
                   <span class="contact-method__label">Email</span>
                   <span class="contact-method__value">hello@riddhibantia.dev</span>
                 </a>
-                <a href="https://github.com" target="_blank" class="contact-method">
+                <a href="https://github.com/riddhibantia" target="_blank" class="contact-method">
                   <span class="contact-method__label">GitHub</span>
                   <span class="contact-method__value">github.com/riddhibantia</span>
                 </a>
-                <a href="https://linkedin.com" target="_blank" class="contact-method">
+                <a href="https://linkedin.com/in/riddhibantia" target="_blank" class="contact-method">
                   <span class="contact-method__label">LinkedIn</span>
                   <span class="contact-method__value">linkedin.com/in/riddhibantia</span>
                 </a>
@@ -463,18 +453,17 @@
       </div>
       <div class="footer__col">
         <span class="footer__col-title">Services</span>
-        <span class="footer__col-item">Scroll Driven Animations</span>
-        <span class="footer__col-item">WebGL Effects</span>
-        <span class="footer__col-item">Visual Design</span>
+        <span class="footer__col-item">Web Development</span>
+        <span class="footer__col-item">ML/AI Solutions</span>
       </div>
       <div class="footer__col">
         <span class="footer__col-title">Tools & technologies</span>
-        <span class="footer__col-item">TypeScript, Three.js, OGL,</span>
-        <span class="footer__col-item">GSAP, Vite, Figma</span>
+        <span class="footer__col-item">TypeScript, Python, React,</span>
+        <span class="footer__col-item">Node.js, scikit-learn, Vite</span>
       </div>
       <div class="footer__right">
-        <a href="https://github.com" target="_blank" class="footer__link" data-nav-link>GitHub</a>
-        <a href="https://linkedin.com" target="_blank" class="footer__link" data-nav-link>LinkedIn</a>
+        <a href="https://github.com/riddhibantia" target="_blank" class="footer__link">GitHub</a>
+        <a href="https://linkedin.com/in/riddhibantia" target="_blank" class="footer__link">LinkedIn</a>
         <a href="mailto:hello@riddhibantia.dev" class="footer__link" data-nav-link>Email</a>
       </div>
     </div>

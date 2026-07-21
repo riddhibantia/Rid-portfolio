@@ -49,6 +49,10 @@
   color: var(--text-muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 3;
 }
 
 .hero__title {

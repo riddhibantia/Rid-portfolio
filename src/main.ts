@@ -148,9 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const ScrollTrigger = window.ScrollTrigger;
     gsap.registerPlugin(ScrollTrigger);
 
-    // Parallax on hero title
-    gsap.to('.hero__title', {
-      yPercent: -20,
+    // Parallax on hero left content block
+    gsap.to('.hero__left', {
+      yPercent: -15,
       ease: 'none',
       scrollTrigger: {
         trigger: '.hero',

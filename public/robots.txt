@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rid.dev/sitemap.xml
+Sitemap: https://riddhibantia.dev/sitemap.xml

@@ -249,7 +249,7 @@ export function initParticleStar(
     const rect = canvasEl.getBoundingClientRect();
     const touch = e.touches[0];
     mouseX = touch.clientX - rect.left;
-    mouseY = touch.clientY - touch.top; // Fixed clientY subtraction
+    mouseY = touch.clientY - rect.top;
   };
 
   canvasEl.addEventListener('mousemove', onMouseMove);
