@@ -23,7 +23,7 @@
     content="Riddhi Bantia is a design and technology studio crafting interactive web experiences, 3D visuals, and intelligent systems." />
   <meta property="og:image" content="https://riddhibantia.dev/hero_portrait.png" />
 
-  <meta name="theme-color" content="#080414" />
+  <meta name="theme-color" content="#141E27" />
 
   <!-- GSAP for scroll animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
@@ -36,6 +36,9 @@
 <body>
   <!-- Noise Texture Overlay -->
   <div class="noise-overlay"></div>
+
+  <!-- Global LiquidEther fluid background — fixed, behind all content -->
+  <div id="liquid-ether-bg" class="site-ether-bg" style="position:fixed;inset:0;width:100%;height:100%;overflow:hidden;"></div>
 
   <!-- Decorative Border Frame -->
   <div class="border-frame">
@@ -59,7 +62,7 @@
   <!-- Background gradient orb -->
   <div class="gradient-bg-orb" style="top: 10%; left: 5%;"></div>
   <div class="gradient-bg-orb"
-    style="top: 40%; right: 5%; background: radial-gradient(circle, rgba(88, 28, 135, 0.06) 0%, transparent 100%);">
+    style="top: 40%; right: 5%; background: radial-gradient(circle, rgba(224, 221, 170, 0.04) 0%, transparent 100%);">
   </div>
 
   <!-- 0. HEADER -->
@@ -76,6 +79,7 @@
           <li><a href="#work" class="nav__link" data-nav-link>Work</a></li>
           <li><a href="#capabilities" class="nav__link" data-nav-link>Capabilities</a></li>
           <li><a href="#about" class="nav__link" data-nav-link>About</a></li>
+          <li><a href="#certificates" class="nav__link" data-nav-link>Certificates</a></li>
           <li><a href="#contact" class="nav__link" data-nav-link>Contact</a></li>
         </ul>
       </nav>
@@ -104,8 +108,15 @@
 
         <div class="hero__bottom">
           <div class="hero__cta" data-reveal>
-            <a href="#contact" class="btn btn--outline">Start a project</a>
-            <a href="#work" class="btn btn--outline">View work</a>
+            <a href="#contact" class="specular-button specular-button--lg" data-specular data-sb-radius="18" data-sb-line-color="#ffffff" data-sb-base-color="#2D4250" data-sb-intensity="1" data-sb-shine-size="10" data-sb-shine-fade="40" data-sb-thickness="1" data-sb-speed="0.35" data-sb-proximity="250">
+              <span class="specular-button__label">Start a project</span>
+            </a>
+            <a href="#work" class="specular-button specular-button--lg" data-specular data-sb-radius="18" data-sb-line-color="#ffffff" data-sb-base-color="#2D4250" data-sb-intensity="1" data-sb-shine-size="10" data-sb-shine-fade="40" data-sb-thickness="1" data-sb-speed="0.35" data-sb-proximity="250">
+              <span class="specular-button__label">View work</span>
+            </a>
+            <a href="#certificates" class="specular-button specular-button--lg" data-specular data-sb-radius="18" data-sb-line-color="#ffffff" data-sb-base-color="#2D4250" data-sb-intensity="1" data-sb-shine-size="10" data-sb-shine-fade="40" data-sb-thickness="1" data-sb-speed="0.35" data-sb-proximity="250">
+              <span class="specular-button__label">Certificates</span>
+            </a>
           </div>
           <p class="hero__description" data-reveal>
             I work at the intersection of design and code — crafting interfaces that are intuitive,
@@ -199,89 +210,130 @@
       <div class="section-transition-blur bottom-blur" id="blur-bottom-work"></div>
     </section>
 
-    <!-- 4. CAPABILITIES -->
-    <section id="capabilities" class="section capabilities capabilities--light">
-      <div class="capabilities__transition"></div>
+    <!-- 4. CAPABILITIES / TOOLS & TECHNOLOGIES -->
+    <section id="capabilities" class="section capabilities">
       <div class="container">
-        <div class="capabilities__layout">
-          <div class="capabilities__left">
-            <h2 class="capabilities__title" data-reveal>Tools and<br>Technologies</h2>
-            <div class="capabilities__grid">
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/blender" alt="Blender logo" />
-                <h3 class="tool-card__name">Blender</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/threedotjs" alt="Three.js logo" />
-                <h3 class="tool-card__name">Three.js</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/typescript" alt="TypeScript logo" />
-                <h3 class="tool-card__name">TypeScript</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/react" alt="React logo" />
-                <h3 class="tool-card__name">React</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind CSS logo" />
-                <h3 class="tool-card__name">Tailwind CSS</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/figma" alt="Figma logo" />
-                <h3 class="tool-card__name">Figma</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/adobephotoshop" alt="Photoshop logo" />
-                <h3 class="tool-card__name">Photoshop</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js logo" />
-                <h3 class="tool-card__name">Node.js</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/python" alt="Python logo" />
-                <h3 class="tool-card__name">Python</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL logo" />
-                <h3 class="tool-card__name">PostgreSQL</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/wordpress" alt="WordPress logo" />
-                <h3 class="tool-card__name">WordPress</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/pytorch" alt="PyTorch logo" />
-                <h3 class="tool-card__name">PyTorch</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/git" alt="Git logo" />
-                <h3 class="tool-card__name">Git</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/visualstudiocode" alt="VS Code logo" />
-                <h3 class="tool-card__name">VS Code</h3>
-              </div>
-              <div class="tool-card" data-reveal>
-                <img class="tool-card__icon" src="https://cdn.simpleicons.org/vite" alt="Vite logo" />
-                <h3 class="tool-card__name">Vite</h3>
+        <div class="capabilities__header" data-reveal>
+          <span class="section__eyebrow">// TOOLS & TECHNOLOGIES</span>
+          <h2 class="capabilities__title">Stack & Engineering Capabilities</h2>
+          <p class="capabilities__subtitle">
+            A minimal, production-grade collection of frameworks, languages, and design systems I leverage to build high-performance web applications and intelligent tools.
+          </p>
+        </div>
+
+        <div class="capabilities__grid" data-reveal>
+          <!-- Card 1: Frontend -->
+          <div class="tech-card">
+            <div class="tech-card__top">
+              <span class="tech-card__tag">FRONTEND & INTERACTIVE</span>
+              <div class="tech-card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
               </div>
             </div>
+            <div>
+              <h3 class="tech-card__title">Frontend Development</h3>
+              <p class="tech-card__desc">Building reactive single-page applications, custom WebGL animations, and responsive micro-interactions with pixel-perfect precision.</p>
+            </div>
+            <div class="tech-card__badges">
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/react/61dafb" alt="" /> React</span>
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/typescript/3178c6" alt="" /> TypeScript</span>
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/threedotjs/ffffff" alt="" /> Three.js</span>
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/tailwindcss/06b6d4" alt="" /> Tailwind CSS</span>
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/vite/646cff" alt="" /> Vite</span>
+            </div>
           </div>
-          <div class="capabilities__right" data-reveal>
-            <h2 class="capabilities__expertise-title">Expertise</h2>
-            <p class="capabilities__expertise-text">
-              I have worked in the technology industry building interactive experiences
-              and intelligent systems — as a Software Engineer and UX/UI Designer.
-              Before entering the technology field, I explored creative problem solving
-              through design, which continues to inform how I approach every project.
-            </p>
-            <p class="capabilities__expertise-text">
-              My work sits at the intersection of aesthetic precision and technical depth.
-              Every project starts with understanding the problem — then choosing the right
-              technology to solve it.
-            </p>
+
+          <!-- Card 2: AI & ML -->
+          <div class="tech-card">
+            <div class="tech-card__top">
+              <span class="tech-card__tag">INTELLIGENT SYSTEMS</span>
+              <div class="tech-card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5"/></svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="tech-card__title">AI & Machine Learning</h3>
+              <p class="tech-card__desc">Developing predictive analytics models, NLP pipelines, and data-driven insights to transform raw information into intelligent products.</p>
+            </div>
+            <div class="tech-card__badges">
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/python/3776ab" alt="" /> Python</span>
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/pytorch/ee4c2c" alt="" /> PyTorch</span>
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/scikitlearn/f7931e" alt="" /> scikit-learn</span>
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/pandas/150458" alt="" /> Pandas</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Backend & Data -->
+          <div class="tech-card">
+            <div class="tech-card__top">
+              <span class="tech-card__tag">BACKEND & INFRASTRUCTURE</span>
+              <div class="tech-card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="tech-card__title">Backend & Databases</h3>
+              <p class="tech-card__desc">Architecting performant server routines, structured SQL schemas, and scalable REST endpoints designed for speed and reliability.</p>
+            </div>
+            <div class="tech-card__badges">
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/nodedotjs/5fa04e" alt="" /> Node.js</span>
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/postgresql/4169e1" alt="" /> PostgreSQL</span>
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/git/f05032" alt="" /> Git</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Design & Systems -->
+          <div class="tech-card">
+            <div class="tech-card__top">
+              <span class="tech-card__tag">CREATIVE DIRECTION</span>
+              <div class="tech-card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="tech-card__title">UI/UX & 3D Design</h3>
+              <p class="tech-card__desc">Crafting high-fidelity UI systems, interactive prototypes, and 3D assets with an obsessive focus on typography, motion, and ergonomics.</p>
+            </div>
+            <div class="tech-card__badges">
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/figma/f24e1e" alt="" /> Figma</span>
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/blender/ea7600" alt="" /> Blender</span>
+              <span class="tech-badge"><img src="https://cdn.simpleicons.org/adobephotoshop/31a8ff" alt="" /> Photoshop</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sleek Marquee Icon Strip -->
+        <div class="tools-marquee" data-reveal style="margin-top: 3rem;">
+          <div class="tools-marquee__track">
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/blender/ea7600" alt="" /><span class="tools-marquee__name">Blender</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/threedotjs/ffffff" alt="" /><span class="tools-marquee__name">Three.js</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/typescript/3178c6" alt="" /><span class="tools-marquee__name">TypeScript</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/react/61dafb" alt="" /><span class="tools-marquee__name">React</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/tailwindcss/06b6d4" alt="" /><span class="tools-marquee__name">Tailwind CSS</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/figma/f24e1e" alt="" /><span class="tools-marquee__name">Figma</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/adobephotoshop/31a8ff" alt="" /><span class="tools-marquee__name">Photoshop</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/nodedotjs/5fa04e" alt="" /><span class="tools-marquee__name">Node.js</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/python/3776ab" alt="" /><span class="tools-marquee__name">Python</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/postgresql/4169e1" alt="" /><span class="tools-marquee__name">PostgreSQL</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/pytorch/ee4c2c" alt="" /><span class="tools-marquee__name">PyTorch</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/git/f05032" alt="" /><span class="tools-marquee__name">Git</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/visualstudiocode/007acc" alt="" /><span class="tools-marquee__name">VS Code</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/vite/646cff" alt="" /><span class="tools-marquee__name">Vite</span></div>
+            <!-- Duplicate for infinite loop -->
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/blender/ea7600" alt="" /><span class="tools-marquee__name">Blender</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/threedotjs/ffffff" alt="" /><span class="tools-marquee__name">Three.js</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/typescript/3178c6" alt="" /><span class="tools-marquee__name">TypeScript</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/react/61dafb" alt="" /><span class="tools-marquee__name">React</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/tailwindcss/06b6d4" alt="" /><span class="tools-marquee__name">Tailwind CSS</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/figma/f24e1e" alt="" /><span class="tools-marquee__name">Figma</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/adobephotoshop/31a8ff" alt="" /><span class="tools-marquee__name">Photoshop</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/nodedotjs/5fa04e" alt="" /><span class="tools-marquee__name">Node.js</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/python/3776ab" alt="" /><span class="tools-marquee__name">Python</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/postgresql/4169e1" alt="" /><span class="tools-marquee__name">PostgreSQL</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/pytorch/ee4c2c" alt="" /><span class="tools-marquee__name">PyTorch</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/git/f05032" alt="" /><span class="tools-marquee__name">Git</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/visualstudiocode/007acc" alt="" /><span class="tools-marquee__name">VS Code</span></div>
+            <div class="tools-marquee__item"><img class="tools-marquee__icon" src="https://cdn.simpleicons.org/vite/646cff" alt="" /><span class="tools-marquee__name">Vite</span></div>
           </div>
         </div>
       </div>
@@ -372,6 +424,42 @@
         </div>
       </div>
       <div class="section-transition-blur bottom-blur" id="blur-bottom-about"></div>
+    </section>
+
+    <!-- 5b. CERTIFICATES -->
+    <section id="certificates" class="section certificates">
+      <div class="section-transition-blur top-blur" id="blur-certificates"></div>
+      <div class="container">
+        <div class="section__header" data-reveal>
+          <span class="section__eyebrow">Credentials</span>
+          <h2 class="section__title">Certificates</h2>
+          <p class="section__subtitle">Certifications and courses I've completed to sharpen my skills.</p>
+        </div>
+        <div class="certificates__grid" data-reveal>
+          <div class="certificate-card">
+            <div class="certificate-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            </div>
+            <h3 class="certificate-card__title">Google UX Design</h3>
+            <span class="certificate-card__issuer">Google</span>
+          </div>
+          <div class="certificate-card">
+            <div class="certificate-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 12 0v-5"/></svg>
+            </div>
+            <h3 class="certificate-card__title">Python for Data Science & AI</h3>
+            <span class="certificate-card__issuer">IBM</span>
+          </div>
+          <div class="certificate-card">
+            <div class="certificate-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+            </div>
+            <h3 class="certificate-card__title">Introduction to Machine Learning</h3>
+            <span class="certificate-card__issuer">Kaggle</span>
+          </div>
+        </div>
+      </div>
+      <div class="section-transition-blur bottom-blur" id="blur-bottom-certificates"></div>
     </section>
 
     <!-- 6. CTA -->

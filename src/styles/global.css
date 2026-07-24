@@ -2,33 +2,37 @@
 @import './gradual-blur.css';
 @import './navbar.css';
 @import './hero.css';
+@import './marquee.css';
 @import './about.css';
 @import './services.css';
 @import './capabilities.css';
 @import './projects.css';
 @import './contact.css';
+@import './certificates.css';
+@import './specular-button.css';
+@import './liquid-ether.css';
+@import './spotlight-card.css';
 @import './footer.css';
 
 :root {
-  /* ── Cosmic Violet Palette ── */
-  --bg-primary: #080414;
-  --bg-secondary: #100826;
-  --bg-card: #160e2e;
-  --border-card: #2a1f4e;
-  --border-hover: #3d2d6b;
-  --text-primary: #f5f0ff;
-  --text-secondary: #9890b0;
-  --text-muted: #5a4f78;
-  --primary: #c4b5fd;
-  --primary-hover: #ddd6fe;
-  --primary-glow: rgba(196, 181, 253, 0.1);
-  --accent: #a855f7;
-  --accent-hover: #c084fc;
+  /* ── Deep Purple-Black Palette (LiquidEther) ── */
+  --bg-primary: #09070f;
+  --bg-secondary: #110d1c;
+  --bg-card: #1a1428;
+  --border-card: #2e2145;
+  --border-hover: #4a3470;
+  --text-primary: #EEEDDE;
+  --text-secondary: #a8a0b8;
+  --text-muted: #6b6080;
+  --primary: #E0DDAA;
+  --primary-hover: #EEEDDE;
+  --primary-glow: rgba(224, 221, 170, 0.08);
+  --accent: #E0DDAA;
+  --accent-hover: #EEEDDE;
   --success: #22c55e;
-  --glow-purple: rgba(168, 85, 247, 0.15);
-  --glow-violet: rgba(196, 181, 253, 0.08);
-  --bg-light: #f0ebe6;
-  --text-dark: #1a1a2e;
+  --glow-warm: rgba(178, 150, 220, 0.08);
+  --bg-light: #EEEDDE;
+  --text-dark: #09070f;
 
   /* ── Typography ── */
   --font-heading: 'Instrument Serif', 'Georgia', serif;
@@ -46,9 +50,9 @@
   --radius-pill: 1000px;
 
   /* ── Shadows ── */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 1px 3px rgba(10, 15, 20, 0.5);
+  --shadow-md: 0 4px 12px rgba(10, 15, 20, 0.6);
+  --shadow-lg: 0 12px 40px rgba(10, 15, 20, 0.7);
 
   /* ── Transitions ── */
   --transition-fast: 0.15s ease;
@@ -59,10 +63,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
-  background:
-    radial-gradient(ellipse at 30% 20%, rgba(88, 28, 135, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 80%, rgba(88, 28, 135, 0.1) 0%, transparent 50%),
-    var(--bg-primary);
+  background: transparent;
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.5;
@@ -85,6 +86,33 @@ body {
   background-size: 256px 256px;
 }
 
+/* ── Global LiquidEther Fluid Background ── */
+.site-ether-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;           /* behind everything */
+  pointer-events: auto; /* receives mouse/touch for fluid reaction */
+  touch-action: none;
+  /* Dark base fill so fluid composites on top of the dark theme */
+  background-color: var(--bg-primary);
+}
+
+/* Sections sit above fluid background; keep transparent backgrounds */
+main > section,
+.hero,
+#services,
+#work,
+#capabilities,
+#about,
+#certificates,
+#contact {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
 /* Decorative Border Frame */
 .border-frame {
   position: fixed;
@@ -93,7 +121,7 @@ body {
   transform: translateX(-50%);
   width: calc(100% - 32px);
   height: calc(100vh - 32px);
-  border: 1px solid rgba(168, 85, 247, 0.06);
+  border: 1px solid rgba(45, 66, 80, 0.15);
   pointer-events: none;
   z-index: 9999;
 }
@@ -101,14 +129,14 @@ body {
   position: absolute;
   width: 16px;
   height: 2px;
-  background: rgba(196, 181, 253, 0.3);
+  background: rgba(224, 221, 170, 0.35);
 }
 .border-corner::after {
   content: '';
   position: absolute;
   width: 2px;
   height: 16px;
-  background: rgba(196, 181, 253, 0.3);
+  background: rgba(224, 221, 170, 0.35);
 }
 .border-corner--tl { top: 0; left: 0; }
 .border-corner--tl::after { top: 0; left: 0; }
@@ -145,7 +173,7 @@ body {
   font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: 400;
   font-style: italic;
-  background: linear-gradient(120deg, #5a4f78 0%, #5a4f78 35%, #c4b5fd 50%, #5a4f78 65%, #5a4f78 100%);
+  background: linear-gradient(120deg, #6B6860 0%, #6B6860 35%, #E0DDAA 50%, #6B6860 65%, #6B6860 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -158,7 +186,7 @@ body {
   left: 50%;
   width: 1px;
   height: 100%;
-  background: rgba(168, 85, 247, 0.15);
+  background: rgba(45, 66, 80, 0.3);
   transform: translateX(-50%);
 }
 
@@ -257,23 +285,23 @@ body {
   text-decoration: none;
 }
 .btn--primary {
-  background: linear-gradient(135deg, #c4b5fd 0%, #a855f7 100%);
+  background: var(--accent);
   color: var(--bg-primary);
 }
 .btn--primary:hover {
-  background: linear-gradient(135deg, #ddd6fe 0%, #c084fc 100%);
+  background: var(--accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 0 24px rgba(168, 85, 247, 0.25);
+  box-shadow: 0 0 24px rgba(224, 221, 170, 0.12);
 }
 .btn--outline {
   background: transparent;
   color: var(--text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(238, 237, 222, 0.15);
   backdrop-filter: blur(4px);
 }
 .btn--outline:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(196, 181, 253, 0.3);
+  background: rgba(224, 221, 170, 0.04);
+  border-color: rgba(45, 66, 80, 0.5);
 }
 .btn--large { padding: 1rem 2.5rem; font-size: 1rem; }
 .btn--small { padding: 0.6rem 1.25rem; font-size: 0.8rem; }
@@ -296,7 +324,7 @@ body {
   width: 30rem;
   height: 30rem;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--glow-purple) 0%, transparent 100%);
+  background: radial-gradient(circle, var(--glow-warm) 0%, transparent 100%);
   filter: blur(80px);
   z-index: -1;
   pointer-events: none;
@@ -319,5 +347,5 @@ body {
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
-::-webkit-scrollbar-thumb { background: #2a1f4e; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #3d2d6b; }
+::-webkit-scrollbar-thumb { background: var(--border-card); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-hover); }

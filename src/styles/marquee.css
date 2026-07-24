@@ -1,0 +1,94 @@
+/* marquee.css — Horizontal infinite scroll tool pills (Linear / Vercel style) */
+
+.tools-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  padding: 0.5rem 0;
+}
+
+.tools-marquee__track {
+  display: flex;
+  gap: 0.875rem;
+  width: max-content;
+  animation: toolsScroll 45s linear infinite;
+  will-change: transform;
+}
+
+.tools-marquee:hover .tools-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes toolsScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Tool pill (Linear / Vercel dark mode pill) ── */
+.tools-marquee__item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+  flex-shrink: 0;
+}
+
+.tools-marquee__item:hover {
+  border-color: rgba(224, 221, 170, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.4);
+}
+
+.tools-marquee__icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tools-marquee__item:hover .tools-marquee__icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.tools-marquee__name {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .tools-marquee__track {
+    gap: 0.625rem;
+  }
+
+  .tools-marquee__item {
+    padding: 0.55rem 0.95rem;
+  }
+
+  .tools-marquee__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .tools-marquee__name {
+    font-size: 0.72rem;
+  }
+}

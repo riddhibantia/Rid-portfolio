@@ -3,12 +3,15 @@
  */
 
 import './styles/global.css';
-import { initParticleStar } from './components/ParticleStar.ts';
+// ParticleStar replaced by LiquidEther fluid background
 import { initNavbar } from './components/Navbar.ts';
 import { initCarousel } from './components/Carousel.ts';
 import { initProjects } from './components/Projects.ts';
 import { initContact } from './components/Contact.ts';
 import { GradualBlur } from './components/GradualBlur.ts';
+import { initSpecularButtons } from './components/SpecularButton.ts';
+import { initSpotlightCards } from './components/SpotlightCard.ts';
+import { initLiquidEther } from './components/LiquidEther.ts';
 
 declare global {
   interface Window {
@@ -59,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Section top transition boundary blurs (Services, Work, About, Contact, Footer)
-  const blurSectionIds = ['services', 'work', 'about', 'contact', 'footer'];
+  const blurSectionIds = ['services', 'work', 'about', 'certificates', 'contact', 'footer'];
   blurSectionIds.forEach(id => {
     const container = document.getElementById(`blur-${id}`);
     if (container) {
@@ -75,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Section bottom transition boundary blurs
-  const bottomBlurIds = ['services', 'work', 'capabilities', 'about', 'contact'];
+  const bottomBlurIds = ['services', 'work', 'capabilities', 'about', 'certificates', 'contact'];
   bottomBlurIds.forEach(id => {
     const container = document.getElementById(`blur-bottom-${id}`);
     if (container) {
@@ -90,21 +93,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 2. Particle Star (hero 3D effect)
-  initParticleStar('#particle-star-canvas', {
-    particleCount: 4500,
-    baseColor: '#3b0764', // Deep cosmic purple
-    glowColor: '#a855f7', // Bright magenta/violet
-    edgeColor: '#ffffff', // Brilliant white core
-    rotationSpeed: 0.08,
-    mouseStrength: 1.2,
-  });
+  // 2. Particle Star — disabled, replaced by LiquidEther fluid background
+
+  // 2b. Liquid Ether (site-wide fluid background)
+  try {
+    initLiquidEther({
+      container: '#liquid-ether-bg',
+      colors: ['#160B2C', '#5227FF', '#FF9FFC', '#B497CF', '#F3E8FF'],
+      mouseForce: 35,
+      cursorSize: 180,
+      resolution: 0.5,
+      autoDemo: true,
+      autoSpeed: 0.5,
+      autoIntensity: 2.8,
+      autoResumeDelay: 1000,
+      autoRampDuration: 0.6,
+      BFECC: true,
+      iterationsPoisson: 32,
+    });
+  } catch (e) {
+    console.warn('LiquidEther init failed:', e);
+  }
 
   // 3. Interactive components
   initNavbar();
   initCarousel();
   initProjects();
   initContact();
+  initSpecularButtons();
+  initSpotlightCards();
 
   // 4. Scroll Reveal ([data-reveal])
   const revealElements = document.querySelectorAll<HTMLElement>('[data-reveal]');
