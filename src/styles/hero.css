@@ -1,6 +1,7 @@
 /* hero.css — hero is transparent; LiquidEther global bg shows through */
 .hero {
   position: relative;
+  z-index: 2; /* stay above adjacent sections' transition blurs so they can't frost the CTA buttons */
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
@@ -40,8 +41,8 @@
 
 .hero__label {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -83,7 +84,8 @@
 }
 
 .hero__description {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 450;
   color: var(--text-secondary);
   max-width: 22rem;
   line-height: 1.7;
@@ -104,7 +106,7 @@
 
 .hero__scroll-text {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   color: var(--text-muted);
   letter-spacing: 0.15em;
   text-transform: uppercase;

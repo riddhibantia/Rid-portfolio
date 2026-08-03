@@ -29,22 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 1b. Gradual Blur overlays
-  // Navbar blur background (sticky header)
-  const headerEl = document.getElementById('header');
-  if (headerEl) {
-    new GradualBlur(headerEl, {
-      position: 'top',
-      height: '100%',
-      strength: 3,
-      divCount: 8,
-      opacity: 0.95,
-      curve: 'bezier',
-      zIndex: -1 // Sits behind logo and nav links
-    });
-  }
-
-
-
   // Capabilities section top transition boundary blur
   const capSection = document.getElementById('capabilities');
   if (capSection) {
@@ -62,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Section top transition boundary blurs (Services, Work, About, Contact, Footer)
-  const blurSectionIds = ['services', 'work', 'about', 'certificates', 'contact', 'footer'];
+  const blurSectionIds = ['work', 'about', 'certificates', 'contact', 'footer'];
   blurSectionIds.forEach(id => {
     const container = document.getElementById(`blur-${id}`);
     if (container) {

@@ -12,11 +12,14 @@ export function initProjects(): void {
 
   // Open modal
   openButtons.forEach(btn => {
+    // Carousel cards open their own dialogs in Carousel.ts
+    if (btn.closest('.work__carousel')) return;
+
     btn.addEventListener('click', () => {
       const dialogId = btn.getAttribute('data-dialog-target');
       if (dialogId) {
         const dialog = document.getElementById(dialogId) as HTMLDialogElement;
-        if (dialog) {
+        if (dialog && !dialog.open) {
           dialog.showModal();
           // Prevent body scroll when dialog is active
           document.body.style.overflow = 'hidden';

@@ -73,7 +73,7 @@ export function initContact(): void {
 
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
+        submitBtn.textContent = 'Send message';
       }
     }, 1500);
   });

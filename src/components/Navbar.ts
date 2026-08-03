@@ -17,20 +17,43 @@ export function initNavbar(): void {
 
   // 2. Mobile menu toggle
   if (menuToggle && navMenu) {
+    const mobileMenu = window.matchMedia('(max-width: 768px)');
+
+    const setMenuOpen = (open: boolean) => {
+      navMenu.classList.toggle('is-open', open);
+      menuToggle.classList.toggle('is-open', open);
+      menuToggle.setAttribute('aria-expanded', String(open));
+      // inert only applies in the mobile layout; desktop nav must stay interactive
+      if (mobileMenu.matches) {
+        navMenu.toggleAttribute('inert', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+    };
+
     menuToggle.addEventListener('click', () => {
-      const isOpen = navMenu.classList.contains('is-open');
-      navMenu.classList.toggle('is-open');
-      menuToggle.classList.toggle('is-open');
-      document.body.style.overflow = isOpen ? '' : 'hidden';
+      setMenuOpen(!navMenu.classList.contains('is-open'));
     });
 
     // Close on nav link click
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('is-open');
-        menuToggle.classList.remove('is-open');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', () => setMenuOpen(false));
     });
+
+    // Close with Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('is-open')) {
+        setMenuOpen(false);
+        menuToggle.focus();
+      }
+    });
+
+    // Reset open state if resized to desktop
+    mobileMenu.addEventListener('change', () => {
+      if (!mobileMenu.matches && navMenu.classList.contains('is-open')) {
+        setMenuOpen(false);
+      }
+    });
+
+    setMenuOpen(false);
   }
 }

@@ -33,7 +33,7 @@
 }
 
 .contact-method__value {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-primary);
   transition: color var(--transition-fast);
@@ -61,7 +61,7 @@
 
 .form-group label {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -76,7 +76,7 @@
   padding: 0.75rem 1rem;
   border-radius: var(--radius-md);
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 .form-group input:focus,
@@ -129,7 +129,8 @@
 
 .cta__available {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: var(--text-secondary);
 }
 

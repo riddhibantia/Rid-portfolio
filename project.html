@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <title>Project — Riddhi Bantia</title>
+  <meta name="title" content="Project — Riddhi Bantia" />
+  <meta name="description"
+    content="Project case study — Riddhi Bantia is a design and technology studio crafting interactive web experiences, 3D visuals, and intelligent systems." />
+</head>
+
+<body>
+  <header class="project-header">
+    <div class="container project-header__inner">
+      <a href="/" class="project-header__back">← Back</a>
+      <a href="/" class="project-header__brand">Riddhi Bantia</a>
+    </div>
+  </header>
+
+  <main class="project-main">
+    <div class="container">
+      <div class="project-hero">
+        <span class="project-hero__tag" id="p-tag">// project</span>
+        <h1 class="project-hero__title" id="p-title">Loading…</h1>
+        <div class="project-hero__banner" id="p-banner">
+          <span class="project-hero__banner-label" id="p-banner-label"></span>
+        </div>
+      </div>
+
+      <div class="project-layout">
+        <section class="project-section">
+          <h2 class="project-section__title">Overview</h2>
+          <p class="project-section__body" id="p-overview"></p>
+
+          <h2 class="project-section__title">Key Features</h2>
+          <ul class="project-features" id="p-features"></ul>
+        </section>
+
+        <aside class="project-meta">
+          <h2 class="project-section__title">Technologies</h2>
+          <div class="project-techs" id="p-techs"></div>
+
+          <div class="project-actions">
+            <a id="p-repo" class="btn btn--outline btn--full" target="_blank" rel="noopener">Repository</a>
+            <a id="p-live" class="btn btn--primary btn--full" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </aside>
+      </div>
+
+      <nav class="project-nav">
+        <a class="project-nav__link project-nav__link--prev" id="p-prev" href="/"></a>
+        <a class="project-nav__link project-nav__link--next" id="p-next" href="/"></a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="project-footer">
+    <div class="container">
+      <span>&copy; 2026 Riddhi Bantia. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/project-detail.ts"></script>
+</body>
+
+</html>

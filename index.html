@@ -6,6 +6,13 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="dark" />
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <title>Riddhi Bantia — Design & Technology Studio</title>
   <meta name="title" content="Riddhi Bantia — Design & Technology Studio" />
@@ -23,14 +30,11 @@
     content="Riddhi Bantia is a design and technology studio crafting interactive web experiences, 3D visuals, and intelligent systems." />
   <meta property="og:image" content="https://riddhibantia.dev/hero_portrait.png" />
 
-  <meta name="theme-color" content="#141E27" />
+  <meta name="theme-color" content="#09070f" />
 
   <!-- GSAP for scroll animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-
-  <!-- Simple Icons for tool logos -->
-  <link rel="stylesheet" href="https://cdn.simpleicons.org/v15/" />
 </head>
 
 <body>
@@ -39,14 +43,6 @@
 
   <!-- Global LiquidEther fluid background — fixed, behind all content -->
   <div id="liquid-ether-bg" class="site-ether-bg" style="position:fixed;inset:0;width:100%;height:100%;overflow:hidden;"></div>
-
-  <!-- Decorative Border Frame -->
-  <div class="border-frame">
-    <div class="border-corner border-corner--tl"></div>
-    <div class="border-corner border-corner--tr"></div>
-    <div class="border-corner border-corner--bl"></div>
-    <div class="border-corner border-corner--br"></div>
-  </div>
 
   <!-- Loading Curtain -->
   <div class="loading-curtain" id="loading-curtain">
@@ -84,7 +80,7 @@
         </ul>
       </nav>
 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav">
         <span class="menu-toggle__bar"></span>
         <span class="menu-toggle__bar"></span>
       </button>
@@ -108,14 +104,11 @@
 
         <div class="hero__bottom">
           <div class="hero__cta" data-reveal>
-            <a href="#contact" class="specular-button specular-button--lg" data-specular data-sb-radius="18" data-sb-line-color="#ffffff" data-sb-base-color="#2D4250" data-sb-intensity="1" data-sb-shine-size="10" data-sb-shine-fade="40" data-sb-thickness="1" data-sb-speed="0.35" data-sb-proximity="250">
+            <a href="#contact" class="specular-button specular-button--lg specular-button--primary" data-specular data-sb-radius="18" data-sb-line-color="#2a2238" data-sb-base-color="#E0DDAA" data-sb-intensity="1.4" data-sb-shine-size="10" data-sb-shine-fade="40" data-sb-thickness="1" data-sb-speed="0.35" data-sb-proximity="250">
               <span class="specular-button__label">Start a project</span>
             </a>
-            <a href="#work" class="specular-button specular-button--lg" data-specular data-sb-radius="18" data-sb-line-color="#ffffff" data-sb-base-color="#2D4250" data-sb-intensity="1" data-sb-shine-size="10" data-sb-shine-fade="40" data-sb-thickness="1" data-sb-speed="0.35" data-sb-proximity="250">
+            <a href="#work" class="specular-button specular-button--lg" data-specular data-sb-radius="18" data-sb-line-color="#ffffff" data-sb-base-color="#2E2145" data-sb-intensity="1" data-sb-shine-size="10" data-sb-shine-fade="40" data-sb-thickness="1" data-sb-speed="0.35" data-sb-proximity="250">
               <span class="specular-button__label">View work</span>
-            </a>
-            <a href="#certificates" class="specular-button specular-button--lg" data-specular data-sb-radius="18" data-sb-line-color="#ffffff" data-sb-base-color="#2D4250" data-sb-intensity="1" data-sb-shine-size="10" data-sb-shine-fade="40" data-sb-thickness="1" data-sb-speed="0.35" data-sb-proximity="250">
-              <span class="specular-button__label">Certificates</span>
             </a>
           </div>
           <p class="hero__description" data-reveal>
@@ -133,13 +126,12 @@
 
     <!-- 2. SERVICES -->
     <section id="services" class="section services">
-      <div class="section-transition-blur top-blur" id="blur-services"></div>
       <div class="container">
         <div class="services__intro" data-reveal>
-          <h2 class="services__headline">From Ideation to Launch,<br>I've Got You Covered.</h2>
+          <h2 class="services__headline">From first sketch<br>to shipped product.</h2>
           <p class="services__description">I design and build digital solutions that solve real problems —
             intelligent systems, responsive interfaces, and data-driven tools that
-            work as good as they look.</p>
+            work as well as they look.</p>
         </div>
 
         <h3 class="services__section-title" data-reveal>What I Do</h3>
@@ -171,40 +163,65 @@
       <div class="container">
         <div class="work__intro" data-reveal>
           <span class="section__eyebrow">Featured Work</span>
-          <h2 class="work__quote">Creating experiences that people love to use because we start from the starting point
-            of those people.</h2>
+          <h2 class="work__quote">We start from the people who'll use it — and build experiences they actually love.</h2>
         </div>
       </div>
 
       <!-- Full-width carousel -->
       <div class="work__carousel" id="work-carousel">
         <div class="carousel__track">
-          <div class="carousel__card" data-project="edureels" data-dialog-target="dialog-edureels">
+          <a class="carousel__card" href="/project.html?id=edureels" target="_blank" rel="noopener" aria-label="View project: EduReels">
             <div class="carousel__card-image" style="background: linear-gradient(135deg, #0d9488, #064e3b);">
+              <span class="carousel__card-tag">01</span>
               <span class="carousel__card-logo">EduReels</span>
             </div>
-          </div>
-          <div class="carousel__card" data-project="accident" data-dialog-target="dialog-accident">
+          </a>
+          <a class="carousel__card" href="/project.html?id=accident" target="_blank" rel="noopener" aria-label="View project: Road Accident Prediction">
             <div class="carousel__card-image" style="background: linear-gradient(135deg, #7c3aed, #4c1d95);">
+              <span class="carousel__card-tag">02</span>
               <span class="carousel__card-logo">Road Accident<br>Prediction</span>
             </div>
-          </div>
-          <div class="carousel__card" data-project="attrition" data-dialog-target="dialog-attrition">
+          </a>
+          <a class="carousel__card" href="/project.html?id=attrition" target="_blank" rel="noopener" aria-label="View project: Employee Attrition Predictor">
             <div class="carousel__card-image" style="background: linear-gradient(135deg, #dc2626, #7f1d1d);">
+              <span class="carousel__card-tag">03</span>
               <span class="carousel__card-logo">Employee Attrition<br>Predictor</span>
             </div>
-          </div>
-          <div class="carousel__card" data-project="nlp" data-dialog-target="dialog-nlp">
+          </a>
+          <a class="carousel__card" href="/project.html?id=nlp" target="_blank" rel="noopener" aria-label="View project: Research Intelligence">
             <div class="carousel__card-image" style="background: linear-gradient(135deg, #2563eb, #1e3a5f);">
+              <span class="carousel__card-tag">04</span>
               <span class="carousel__card-logo">Research<br>Intelligence</span>
             </div>
-          </div>
+          </a>
+          <a class="carousel__card" href="/project.html?id=chatbot" target="_blank" rel="noopener" aria-label="View project: AI Chat Assistant">
+            <div class="carousel__card-image" style="background: linear-gradient(135deg, #06b6d4, #0e7490);">
+              <span class="carousel__card-tag">05</span>
+              <span class="carousel__card-logo">AI Chat<br>Assistant</span>
+            </div>
+          </a>
+          <a class="carousel__card" href="/project.html?id=dashboard" target="_blank" rel="noopener" aria-label="View project: Data Visualization Dashboard">
+            <div class="carousel__card-image" style="background: linear-gradient(135deg, #f59e0b, #92400e);">
+              <span class="carousel__card-tag">06</span>
+              <span class="carousel__card-logo">Data Viz<br>Dashboard</span>
+            </div>
+          </a>
+          <a class="carousel__card" href="/project.html?id=commerce" target="_blank" rel="noopener" aria-label="View project: E-commerce Storefront">
+            <div class="carousel__card-image" style="background: linear-gradient(135deg, #ec4899, #831843);">
+              <span class="carousel__card-tag">07</span>
+              <span class="carousel__card-logo">E-commerce<br>Storefront</span>
+            </div>
+          </a>
         </div>
 
         <div class="carousel__info">
-          <span class="carousel__project-name" id="carousel-name">/EduReels</span>
-          <span class="carousel__counter" id="carousel-counter">01/04</span>
-          <button class="carousel__see-live" id="carousel-live">See live</button>
+          <span class="carousel__project-name" id="carousel-name" aria-live="polite">/EduReels</span>
+          <span class="carousel__counter" id="carousel-counter" aria-live="polite">01/07</span>
+          <div class="carousel__nav">
+            <button class="carousel__nav-btn" id="carousel-prev" aria-label="Previous project">‹</button>
+            <button class="carousel__nav-btn" id="carousel-next" aria-label="Next project">›</button>
+          </div>
+          <button class="carousel__see-live" id="carousel-live">View project</button>
         </div>
       </div>
       <div class="section-transition-blur bottom-blur" id="blur-bottom-work"></div>
@@ -217,7 +234,7 @@
           <span class="section__eyebrow">// TOOLS & TECHNOLOGIES</span>
           <h2 class="capabilities__title">Stack & Engineering Capabilities</h2>
           <p class="capabilities__subtitle">
-            A minimal, production-grade collection of frameworks, languages, and design systems I leverage to build high-performance web applications and intelligent tools.
+            The frameworks, languages, and design systems I reach for to ship high-performance web apps and intelligent tools.
           </p>
         </div>
 
@@ -481,7 +498,7 @@
           <div class="section__header" data-reveal>
             <span class="section__eyebrow">// contact</span>
             <h2 class="section__title">Get in Touch</h2>
-            <p class="section__subtitle">Have an idea? Let's build something together.</p>
+            <p class="section__subtitle">Tell me what you're building — let's take it from there.</p>
           </div>
 
           <div class="contact__grid">
@@ -503,7 +520,7 @@
             </div>
 
             <form class="contact__form" data-reveal>
-              <div class="form-status"></div>
+              <div class="form-status" aria-live="polite"></div>
 
               <div class="form-row">
                 <div class="form-group">
@@ -522,7 +539,7 @@
                   required></textarea>
               </div>
 
-              <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+              <button type="submit" class="btn btn--primary btn--full">Send message</button>
             </form>
           </div>
         </div>
@@ -546,8 +563,7 @@
       </div>
       <div class="footer__col">
         <span class="footer__col-title">Tools & technologies</span>
-        <span class="footer__col-item">TypeScript, Python, React,</span>
-        <span class="footer__col-item">Node.js, scikit-learn, Vite</span>
+        <span class="footer__col-item">TypeScript, Python, React, Node.js, scikit-learn, Vite</span>
       </div>
       <div class="footer__right">
         <a href="https://github.com/riddhibantia" target="_blank" class="footer__link">GitHub</a>
@@ -696,6 +712,114 @@
           <li>Interactive cluster network</li>
           <li>Auto document summaries</li>
           <li>Offline database caching</li>
+        </ul>
+      </div>
+    </div>
+    <div class="dialog__footer">
+      <a href="https://github.com" target="_blank" class="btn btn--outline btn--small">Repository</a>
+      <a href="#" class="btn btn--primary btn--small">Live Demo</a>
+    </div>
+  </dialog>
+
+  <dialog id="dialog-chatbot" class="project-dialog">
+    <div class="dialog__header">
+      <h3 class="dialog__title">AI Chat Assistant</h3>
+      <button class="dialog__close" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="dialog__body">
+      <div>
+        <h4 class="dialog__section-title">Overview</h4>
+        <p>A conversational AI assistant that answers product questions and routes support tickets using a fine-tuned language model.</p>
+      </div>
+      <div>
+        <h4 class="dialog__section-title">Technologies</h4>
+        <div class="dialog__tags">
+          <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">FastAPI</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="dialog__section-title">Key Features</h4>
+        <ul class="dialog__features">
+          <li>RAG over product documentation</li>
+          <li>Intent-based ticket routing</li>
+          <li>Streaming token responses</li>
+          <li>Human hand-off escalation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="dialog__footer">
+      <a href="https://github.com" target="_blank" class="btn btn--outline btn--small">Repository</a>
+      <a href="#" class="btn btn--primary btn--small">Live Demo</a>
+    </div>
+  </dialog>
+
+  <dialog id="dialog-dashboard" class="project-dialog">
+    <div class="dialog__header">
+      <h3 class="dialog__title">Data Visualization Dashboard</h3>
+      <button class="dialog__close" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="dialog__body">
+      <div>
+        <h4 class="dialog__section-title">Overview</h4>
+        <p>An interactive analytics dashboard visualizing thousands of data points with smooth chart transitions and drill-down views.</p>
+      </div>
+      <div>
+        <h4 class="dialog__section-title">Technologies</h4>
+        <div class="dialog__tags">
+          <span class="tag">React</span><span class="tag">D3.js</span><span class="tag">TypeScript</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="dialog__section-title">Key Features</h4>
+        <ul class="dialog__features">
+          <li>Real-time data streaming</li>
+          <li>Drill-down chart interactions</li>
+          <li>Exportable report views</li>
+          <li>Dark/light theme sync</li>
+        </ul>
+      </div>
+    </div>
+    <div class="dialog__footer">
+      <a href="https://github.com" target="_blank" class="btn btn--outline btn--small">Repository</a>
+      <a href="#" class="btn btn--primary btn--small">Live Demo</a>
+    </div>
+  </dialog>
+
+  <dialog id="dialog-commerce" class="project-dialog">
+    <div class="dialog__header">
+      <h3 class="dialog__title">E-commerce Storefront</h3>
+      <button class="dialog__close" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="dialog__body">
+      <div>
+        <h4 class="dialog__section-title">Overview</h4>
+        <p>A fast, accessible online storefront with a frictionless checkout flow and instant product search.</p>
+      </div>
+      <div>
+        <h4 class="dialog__section-title">Technologies</h4>
+        <div class="dialog__tags">
+          <span class="tag">Next.js</span><span class="tag">PostgreSQL</span><span class="tag">Tailwind CSS</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="dialog__section-title">Key Features</h4>
+        <ul class="dialog__features">
+          <li>Instant product search</li>
+          <li>Optimistic cart updates</li>
+          <li>Stripe checkout integration</li>
+          <li>Server-rendered product pages</li>
         </ul>
       </div>
     </div>

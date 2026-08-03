@@ -112,7 +112,7 @@ function createSpecularButton(btn: HTMLElement): SpecularButtonInstance {
 
   const radius = parseFloat(btn.dataset.sbRadius ?? '18');
   const lineColor = btn.dataset.sbLineColor ?? '#ffffff';
-  const baseColor = btn.dataset.sbBaseColor ?? '#525252';
+  const baseColor = btn.dataset.sbBaseColor ?? '#2E2145';
   const intensity = parseFloat(btn.dataset.sbIntensity ?? '1');
   const shineSize = parseFloat(btn.dataset.sbShineSize ?? '10');
   const shineFade = parseFloat(btn.dataset.sbShineFade ?? '40');
@@ -210,6 +210,7 @@ function createSpecularButton(btn: HTMLElement): SpecularButtonInstance {
 }
 
 export function initSpecularButtons(): void {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const buttons = document.querySelectorAll<HTMLElement>('[data-specular]');
   buttons.forEach(btn => createSpecularButton(btn));
 }

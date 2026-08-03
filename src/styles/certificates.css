@@ -14,12 +14,13 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  transition: border-color var(--transition-normal), transform var(--transition-normal);
+  transition: border-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .certificate-card:hover {
-  border-color: var(--border-hover);
-  transform: translateY(-2px);
+  border-color: rgba(224, 221, 170, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 30px rgba(149, 117, 205, 0.06);
 }
 
 .certificate-card__icon {
@@ -31,12 +32,12 @@
   border-radius: 12px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-card);
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .certificate-card__title {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.3;
@@ -44,7 +45,7 @@
 
 .certificate-card__issuer {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
   letter-spacing: 0.05em;
 }

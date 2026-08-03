@@ -5,7 +5,7 @@
   grid-template-columns: 1.2fr 1fr;
   gap: 3rem;
   align-items: end;
-  margin-bottom: clamp(4rem, 8vw, 8rem);
+  margin-bottom: clamp(3rem, 6vw, 6rem);
 }
 
 .services__headline {
@@ -19,7 +19,8 @@
 }
 
 .services__description {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 450;
   color: var(--text-secondary);
   line-height: 1.7;
   max-width: 28rem;
@@ -59,7 +60,7 @@
 
 .service-card__tagline {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   font-style: italic;
   color: var(--text-primary);
@@ -67,7 +68,8 @@
 }
 
 .service-card__desc {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 450;
   color: var(--text-secondary);
   line-height: 1.7;
 }

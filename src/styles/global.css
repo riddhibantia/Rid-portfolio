@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 @import './gradual-blur.css';
 @import './navbar.css';
 @import './hero.css';
@@ -22,8 +21,8 @@
   --border-card: #2e2145;
   --border-hover: #4a3470;
   --text-primary: #EEEDDE;
-  --text-secondary: #a8a0b8;
-  --text-muted: #6b6080;
+  --text-secondary: #bdb6ca;
+  --text-muted: #9c93b2;
   --primary: #E0DDAA;
   --primary-hover: #EEEDDE;
   --primary-glow: rgba(224, 221, 170, 0.08);
@@ -31,6 +30,7 @@
   --accent-hover: #EEEDDE;
   --success: #22c55e;
   --glow-warm: rgba(178, 150, 220, 0.08);
+  --glow-purple: rgba(178, 150, 220, 0.18);
   --bg-light: #EEEDDE;
   --text-dark: #09070f;
 
@@ -79,7 +79,7 @@ body {
   inset: 0;
   z-index: 10000;
   pointer-events: none;
-  opacity: 0.25;
+  opacity: 0.14;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
   background-repeat: repeat;
@@ -112,40 +112,6 @@ main > section,
   z-index: 1;
   background: transparent;
 }
-
-/* Decorative Border Frame */
-.border-frame {
-  position: fixed;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 32px);
-  height: calc(100vh - 32px);
-  border: 1px solid rgba(45, 66, 80, 0.15);
-  pointer-events: none;
-  z-index: 9999;
-}
-.border-corner {
-  position: absolute;
-  width: 16px;
-  height: 2px;
-  background: rgba(224, 221, 170, 0.35);
-}
-.border-corner::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 16px;
-  background: rgba(224, 221, 170, 0.35);
-}
-.border-corner--tl { top: 0; left: 0; }
-.border-corner--tl::after { top: 0; left: 0; }
-.border-corner--tr { top: 0; right: 0; }
-.border-corner--tr::after { top: 0; right: 0; }
-.border-corner--bl { bottom: 0; left: 0; }
-.border-corner--bl::after { bottom: 0; left: 0; }
-.border-corner--br { bottom: 0; right: 0; }
-.border-corner--br::after { bottom: 0; right: 0; }
 
 /* Loading Curtain */
 .loading-curtain {
@@ -186,7 +152,7 @@ main > section,
   left: 50%;
   width: 1px;
   height: 100%;
-  background: rgba(45, 66, 80, 0.3);
+  background: rgba(46, 33, 69, 0.5);
   transform: translateX(-50%);
 }
 
@@ -201,12 +167,12 @@ main > section,
 }
 
 .section {
-  padding: clamp(4rem, 10vw, 10rem) 0;
+  padding: clamp(3rem, 6vw, 5rem) 0;
 }
 
 .section__header {
   text-align: center;
-  margin-bottom: clamp(3rem, 6vw, 5rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,8 +181,8 @@ main > section,
 
 .section__eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -224,7 +190,7 @@ main > section,
 
 .section__title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
   font-weight: 400;
   font-style: italic;
   color: var(--text-primary);
@@ -233,7 +199,8 @@ main > section,
 }
 
 .section__subtitle {
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-weight: 450;
   color: var(--text-secondary);
   max-width: 32rem;
   margin-top: 0.75rem;
@@ -301,21 +268,25 @@ main > section,
 }
 .btn--outline:hover {
   background: rgba(224, 221, 170, 0.04);
-  border-color: rgba(45, 66, 80, 0.5);
+  border-color: rgba(224, 221, 170, 0.3);
 }
 .btn--large { padding: 1rem 2.5rem; font-size: 1rem; }
 .btn--small { padding: 0.6rem 1.25rem; font-size: 0.8rem; }
 .btn--full { width: 100%; }
 
-/* Reveal Animation */
-[data-reveal] {
+/* Reveal Animation — gated behind .js so content stays visible without JS */
+.js [data-reveal] {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
-[data-reveal].is-visible {
+.js [data-reveal].is-visible {
   opacity: 1;
   transform: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
 /* Gradient Background Orb */
@@ -341,7 +312,7 @@ main > section,
   }
   html { scroll-behavior: auto; }
   .loading-curtain { display: none; }
-  [data-reveal] { opacity: 1; transform: none; }
+  .js [data-reveal] { opacity: 1; transform: none; }
 }
 
 /* Scrollbar */

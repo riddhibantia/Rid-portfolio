@@ -2,7 +2,7 @@
 
 .capabilities {
   position: relative;
-  padding: 6rem 0;
+  padding: clamp(3rem, 6vw, 5rem) 0;
   color: var(--text-primary);
 }
 
@@ -25,7 +25,8 @@
 
 .capabilities__subtitle {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-weight: 450;
   color: var(--text-secondary);
   line-height: 1.7;
 }
@@ -35,6 +36,12 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.75rem;
+}
+
+/* Bento rhythm: lead card (Frontend) and closing card (Design) span full width */
+.tech-card:first-child,
+.tech-card:last-child {
+  grid-column: 1 / -1;
 }
 
 /* ── Minimal Modern Tech Card (Linear / Vercel / Apple / Framer style) ── */
@@ -117,7 +124,7 @@
 /* Body Content */
 .tech-card__title {
   font-family: var(--font-body);
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--text-primary);
   letter-spacing: -0.01em;
@@ -127,7 +134,7 @@
 
 .tech-card__desc {
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.65;
   margin: 0;
@@ -151,7 +158,7 @@
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.07);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-primary);
   transition: all 0.25s ease;
