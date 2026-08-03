@@ -100,7 +100,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(120% 90% at 50% 0%, transparent 55%, rgba(0, 0, 0, 0.3) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 28%, transparent 62%, rgba(0, 0, 0, 0.45) 100%);
   pointer-events: none;
 }
 
@@ -144,6 +144,10 @@
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--text-secondary);
+  width: clamp(10rem, 18vw, 16rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .carousel__counter {
@@ -292,5 +296,12 @@
   .carousel__nav-btn {
     width: 32px;
     height: 32px;
+  }
+  .carousel__info {
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
+  }
+  .carousel__project-name {
+    width: clamp(8rem, 38vw, 12rem);
   }
 }
