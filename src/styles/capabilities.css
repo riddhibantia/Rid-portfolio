@@ -71,7 +71,7 @@
   left: 10%;
   right: 10%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(224, 221, 170, 0.6), transparent);
+  background: linear-gradient(90deg, transparent, rgba(217, 249, 157, 0.6), transparent);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -80,10 +80,48 @@
   opacity: 1;
 }
 
+/* Hover-reveal gradient layer (Option 5: expand/rotate + gradient) */
+.tech-card__glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(150deg, rgba(217, 249, 157, 0.14) 0%, rgba(58, 71, 31, 0.55) 45%, rgba(20, 22, 31, 0) 75%);
+  opacity: 0;
+  transform: scale(1.15) rotate(2deg);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tech-card:hover .tech-card__glow {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* Mouse-tracking lime spotlight overlay */
+.tech-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(217, 249, 157, 0.09), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tech-card:hover::after {
+  opacity: 1;
+}
+
+.tech-card > * {
+  position: relative;
+  z-index: 1;
+}
+
 .tech-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(224, 221, 170, 0.25);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 30px rgba(149, 117, 205, 0.05);
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(217, 249, 157, 0.35);
+  box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.6), 0 0 40px rgba(217, 249, 157, 0.1);
 }
 
 /* Top Meta Row */
@@ -118,7 +156,7 @@
 
 .tech-card:hover .tech-card__icon {
   transform: scale(1.08);
-  border-color: rgba(224, 221, 170, 0.3);
+  border-color: rgba(217, 249, 157, 0.3);
 }
 
 /* Body Content */
@@ -172,7 +210,7 @@
 
 .tech-badge:hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(224, 221, 170, 0.3);
+  border-color: rgba(217, 249, 157, 0.3);
   color: var(--primary);
   transform: translateY(-1px);
 }

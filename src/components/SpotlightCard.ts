@@ -6,7 +6,7 @@
  */
 
 export function initSpotlightCards(): void {
-  const cards = document.querySelectorAll<HTMLElement>('.card-spotlight');
+  const cards = document.querySelectorAll<HTMLElement>('.card-spotlight, .tech-card');
   cards.forEach(card => {
     card.addEventListener('mousemove', (e: MouseEvent) => {
       const rect = card.getBoundingClientRect();

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Section top transition boundary blurs (Services, Work, About, Contact, Footer)
-  const blurSectionIds = ['work', 'about', 'certificates', 'contact', 'footer'];
+  const blurSectionIds = ['work', 'certificates', 'contact', 'footer'];
   blurSectionIds.forEach(id => {
     const container = document.getElementById(`blur-${id}`);
     if (container) {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Section bottom transition boundary blurs
-  const bottomBlurIds = ['services', 'work', 'capabilities', 'about', 'certificates', 'contact'];
+  const bottomBlurIds = ['services', 'work', 'capabilities', 'certificates', 'contact'];
   bottomBlurIds.forEach(id => {
     const container = document.getElementById(`blur-bottom-${id}`);
     if (container) {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     initLiquidEther({
       container: '#liquid-ether-bg',
-      colors: ['#160B2C', '#5227FF', '#FF9FFC', '#B497CF', '#F3E8FF'],
+      colors: ['#0a0a0a', '#5c6e2e', '#D9F99D', '#EAFBB5', '#f2fbe3'],
       mouseForce: 35,
       cursorSize: 180,
       resolution: 0.5,

@@ -250,7 +250,7 @@ export function initLiquidEther(opts: LiquidEtherOptions): LiquidEtherInstance |
   if (!containerEl) return null;
 
   const {
-    colors = ['#5227FF', '#FF9FFC', '#B497CF'],
+    colors = ['#5c6e2e', '#D9F99D', '#EAFBB5'],
     mouseForce = 20,
     cursorSize = 100,
     isViscous = false,

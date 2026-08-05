@@ -2,7 +2,6 @@
 @import './navbar.css';
 @import './hero.css';
 @import './marquee.css';
-@import './about.css';
 @import './services.css';
 @import './capabilities.css';
 @import './projects.css';
@@ -14,25 +13,25 @@
 @import './footer.css';
 
 :root {
-  /* ── Deep Purple-Black Palette (LiquidEther) ── */
-  --bg-primary: #09070f;
-  --bg-secondary: #110d1c;
-  --bg-card: #1a1428;
-  --border-card: #2e2145;
-  --border-hover: #4a3470;
+  /* ── Deep Black Palette (LiquidEther) ── */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #14161f;
+  --bg-card: #1a1e2a;
+  --border-card: #2c303e;
+  --border-hover: #43475a;
   --text-primary: #EEEDDE;
-  --text-secondary: #bdb6ca;
-  --text-muted: #9c93b2;
-  --primary: #E0DDAA;
-  --primary-hover: #EEEDDE;
-  --primary-glow: rgba(224, 221, 170, 0.08);
-  --accent: #E0DDAA;
-  --accent-hover: #EEEDDE;
+  --text-secondary: #b0b0b0;
+  --text-muted: #8a8a8a;
+  --primary: #D9F99D;
+  --primary-hover: #EAFBB5;
+  --primary-glow: rgba(217, 249, 157, 0.08);
+  --accent: #D9F99D;
+  --accent-hover: #EAFBB5;
   --success: #22c55e;
-  --glow-warm: rgba(178, 150, 220, 0.08);
-  --glow-purple: rgba(178, 150, 220, 0.18);
+  --glow-warm: rgba(217, 249, 157, 0.06);
+  --glow-purple: rgba(217, 249, 157, 0.14);
   --bg-light: #EEEDDE;
-  --text-dark: #09070f;
+  --text-dark: #0a0a0a;
 
   /* ── Typography ── */
   --font-heading: 'Instrument Serif', 'Georgia', serif;
@@ -139,7 +138,7 @@ main > section,
   font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: 400;
   font-style: italic;
-  background: linear-gradient(120deg, #6B6860 0%, #6B6860 35%, #E0DDAA 50%, #6B6860 65%, #6B6860 100%);
+  background: linear-gradient(120deg, #6B6860 0%, #6B6860 35%, #D9F99D 50%, #6B6860 65%, #6B6860 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -152,7 +151,7 @@ main > section,
   left: 50%;
   width: 1px;
   height: 100%;
-  background: rgba(46, 33, 69, 0.5);
+  background: rgba(42, 42, 42, 0.5);
   transform: translateX(-50%);
 }
 
@@ -216,7 +215,10 @@ main > section,
   position: relative;
   z-index: 2;
 }
-.canvas-card:hover { border-color: var(--border-hover); }
+.canvas-card:hover {
+  border-color: rgba(217, 249, 157, 0.3);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 30px rgba(217, 249, 157, 0.06);
+}
 
 /* Tags */
 .tag {
@@ -258,7 +260,7 @@ main > section,
 .btn--primary:hover {
   background: var(--accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 0 24px rgba(224, 221, 170, 0.12);
+  box-shadow: 0 0 24px rgba(217, 249, 157, 0.12);
 }
 .btn--outline {
   background: transparent;
@@ -267,8 +269,8 @@ main > section,
   backdrop-filter: blur(4px);
 }
 .btn--outline:hover {
-  background: rgba(224, 221, 170, 0.04);
-  border-color: rgba(224, 221, 170, 0.3);
+  background: rgba(217, 249, 157, 0.04);
+  border-color: rgba(217, 249, 157, 0.3);
 }
 .btn--large { padding: 1rem 2.5rem; font-size: 1rem; }
 .btn--small { padding: 0.6rem 1.25rem; font-size: 0.8rem; }

@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     tag: '01',
     title: 'EduReels',
     shortTitle: 'EduReels',
-    gradient: 'linear-gradient(135deg, #bf9336, #4e3d1f)',
+    gradient: 'linear-gradient(135deg, #3a471f, #9fbd42)',
     overview:
       'EduReels is an interactive, bite-sized learning platform delivering educational courses through 60-second micro-videos combined with integrated quizzes.',
     technologies: ['React', 'TypeScript', 'Tailwind CSS'],
@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
     tag: '02',
     title: 'Road Accident Prediction',
     shortTitle: 'Road Accident Prediction',
-    gradient: 'linear-gradient(135deg, #d6bd69, #8a6a2e)',
+    gradient: 'linear-gradient(135deg, #465421, #b6d457)',
     overview:
       'An intelligence system modeling historical crash data to forecast road risk probabilities using a Random Forest Classifier.',
     technologies: ['Python', 'scikit-learn', 'pandas'],
@@ -57,7 +57,7 @@ export const PROJECTS: Project[] = [
     tag: '03',
     title: 'Employee Attrition Predictor',
     shortTitle: 'Employee Attrition Predictor',
-    gradient: 'linear-gradient(135deg, #efe0b5, #b3934e)',
+    gradient: 'linear-gradient(135deg, #2f3a1a, #7c9a2e)',
     overview:
       'An HR dashboard predicting company staff attrition probability using survey scores and business metrics.',
     technologies: ['Python', 'TypeScript', 'Chart.js'],
@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
     tag: '04',
     title: 'Research Intelligence Platform',
     shortTitle: 'Research Intelligence',
-    gradient: 'linear-gradient(135deg, #bf9336, #4e3d1f)',
+    gradient: 'linear-gradient(135deg, #3a471f, #9fbd42)',
     overview:
       'A semantic search engine for academic PDFs using pre-trained Transformer embeddings.',
     technologies: ['TypeScript', 'SQLite', 'Transformers.js'],
@@ -93,7 +93,7 @@ export const PROJECTS: Project[] = [
     tag: '05',
     title: 'AI Chat Assistant',
     shortTitle: 'AI Chat Assistant',
-    gradient: 'linear-gradient(135deg, #d6bd69, #8a6a2e)',
+    gradient: 'linear-gradient(135deg, #465421, #b6d457)',
     overview:
       'A conversational AI assistant that answers product questions and routes support tickets using a fine-tuned language model.',
     technologies: ['Python', 'PyTorch', 'FastAPI'],
@@ -111,7 +111,7 @@ export const PROJECTS: Project[] = [
     tag: '06',
     title: 'Data Visualization Dashboard',
     shortTitle: 'Data Viz Dashboard',
-    gradient: 'linear-gradient(135deg, #efe0b5, #b3934e)',
+    gradient: 'linear-gradient(135deg, #2f3a1a, #7c9a2e)',
     overview:
       'An interactive analytics dashboard visualizing thousands of data points with smooth chart transitions and drill-down views.',
     technologies: ['React', 'D3.js', 'TypeScript'],
@@ -129,7 +129,7 @@ export const PROJECTS: Project[] = [
     tag: '07',
     title: 'E-commerce Storefront',
     shortTitle: 'E-commerce Storefront',
-    gradient: 'linear-gradient(135deg, #bf9336, #4e3d1f)',
+    gradient: 'linear-gradient(135deg, #3a471f, #9fbd42)',
     overview:
       'A fast, accessible online storefront with a frictionless checkout flow and instant product search.',
     technologies: ['Next.js', 'PostgreSQL', 'Tailwind CSS'],

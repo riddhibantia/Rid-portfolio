@@ -43,7 +43,7 @@
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--text-primary);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   display: block;
@@ -133,7 +133,7 @@
   transform: translate(-50%, -50%);
   width: 40vw;
   height: 40vw;
-  background: radial-gradient(circle, rgba(224, 221, 170, 0.04) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(217, 249, 157, 0.04) 0%, transparent 60%);
   filter: blur(60px);
   pointer-events: none;
   z-index: 0;

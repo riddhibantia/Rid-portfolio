@@ -1,7 +1,7 @@
 /* specular-button.css */
 .specular-button {
   --sb-radius: 18px;
-  --sb-tint: #E0DDAA;
+  --sb-tint: #D9F99D;
   --sb-tint-opacity: 0;
   --sb-blur: 0px;
   --sb-text-color: #EEEDDE;
@@ -65,13 +65,13 @@
 
 /* Primary CTA — solid accent fill, dark text */
 .specular-button--primary {
-  --sb-text-color: #09070f;
-  --sb-tint: #E0DDAA;
+  --sb-text-color: #0a0a0a;
+  --sb-tint: #D9F99D;
   --sb-tint-opacity: 1;
   background: var(--accent);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.25),
-    0 8px 24px rgba(224, 221, 170, 0.15);
+    0 8px 24px rgba(217, 249, 157, 0.15);
 }
 .specular-button--primary:hover {
   background: var(--accent-hover);

@@ -10,7 +10,7 @@
   overflow: hidden;
   --mouse-x: 50%;
   --mouse-y: 50%;
-  --spotlight-color: rgba(224, 221, 170, 0.35);
+  --spotlight-color: rgba(217, 249, 157, 0.35);
   display: flex;
   flex-direction: column;
   align-items: center;
